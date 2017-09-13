@@ -1,0 +1,9 @@
+Main building blocks
+
+Component
+Templates
+Metadata
+Data Binding
+Directives
+Services
+Dependency Injection
