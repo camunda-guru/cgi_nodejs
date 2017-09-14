@@ -1,0 +1,30 @@
+this.getTableData = function(callback){
+    oracledb.getConnection(
+        {
+            user : "user",
+            password      : "password",
+            connectString : "db "
+        },
+        function (err, connection) {
+            if (err) {
+                console.error(err);
+                console.log("errorrrrrrrrrrr : "+err);
+                return;
+            }
+            connection.execute("SELECT query",
+                function(err, result) {
+                    if (err) {
+                        console.error(err);
+                        return;
+                    }
+                    else if(result) {
+                        var res = result.rows[0][0];
+                        console.log("result in else if: "+res);
+                        callback(res);
+                    }});
+        });
+};
+
+getTableData(function (result) {
+    console.log(result);
+});
