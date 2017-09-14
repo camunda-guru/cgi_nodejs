@@ -1,0 +1,12 @@
+Here are the steps:
+
+Open an elevated CMD prompt (run as Administrator).
+navigate to your app folder
+npm install --global npm
+npm install --global --production windows-build-tools
+npm install instantclient
+set path in computer environment
+F:\Nodejs_ANZ\instantclient
+set OCI_LIB_DIR=F:\Nodejs_ANZ\instantclient\sdk\lib\msvc
+set OCI_INC_DIR=F:\Nodejs_ANZ\instantclient\sdk\include
+npm install oracledb
